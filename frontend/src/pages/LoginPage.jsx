@@ -60,17 +60,17 @@ export default function LoginPage() {
             <div className="mb-10 flex items-center gap-3">
               <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white p-1.5 shadow-sm">
                 <img
-                  src="/deped-logo.png"
-                  alt="DepEd Logo"
+                  src="/slms-logo.png"
+                  alt="SLMS Logo"
                   className="h-full w-full object-contain"
                 />
               </div>
 
               <div>
-                <h2 className="text-xl font-bold">DepEd Leave</h2>
-                <p className="text-sm text-sky-100">
+                <h2 className="text-xl font-bold">School-Based Leave Management</h2>
+                {/* <p className="text-sm text-sky-100">
                   School-Based Leave Management
-                </p>
+                </p> */}
               </div>
             </div>
 
@@ -113,8 +113,8 @@ export default function LoginPage() {
               <div className="mb-8 text-center">
                 <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-white p-1.5 shadow-sm">
                   <img
-                    src="/deped-logo.png"
-                    alt="DepEd Logo"
+                    src="/slms-logo.png"
+                    alt="SLMS Logo"
                     className="h-full w-full object-contain"
                   />
                 </div>
