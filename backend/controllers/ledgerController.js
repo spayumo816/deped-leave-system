@@ -172,6 +172,12 @@ export const addEarnedCredit = async (req, res) => {
     const { leaveType, earned, transactionDate, particulars, remarks } =
       req.body;
 
+    if (req.userSchool.role !== "admin_officer") {
+      return res.status(403).json({
+        message: "Only Admin Officers can manage leave ledger credits.",
+      });
+    }
+
     const targetUserSchool = await UserSchool.findById(userSchoolId);
 
     if (!targetUserSchool) {
@@ -289,6 +295,12 @@ export const createBeginningBalance = async (req, res) => {
     const { userSchoolId } = req.params;
     const { leaveType, beginningBalance, earned, transactionDate, remarks } =
       req.body || {};
+
+    if (req.userSchool.role !== "admin_officer") {
+      return res.status(403).json({
+        message: "Only Admin Officers can create beginning balances.",
+      });
+    }
 
     const targetUserSchool = await UserSchool.findById(userSchoolId);
 
