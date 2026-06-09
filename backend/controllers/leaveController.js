@@ -243,7 +243,8 @@ export const approveLeave = async (req, res) => {
 
     if (!canAccessSchool(req, leave.userSchool.school)) {
       return res.status(403).json({
-        message: "You can only approve leave applications you are authorized to access.",
+        message:
+          "You can only approve leave applications you are authorized to access.",
       });
     }
 
@@ -273,16 +274,22 @@ export const approveLeave = async (req, res) => {
       });
     }
 
-    const remaining =
-      Number(creditItem.earned || 0) - Number(creditItem.used || 0);
+    const requestedDays = Number(leave.totalDays || 0);
 
-    if (remaining < Number(leave.totalDays)) {
+    if (!requestedDays || requestedDays <= 0) {
       return res.status(400).json({
-        message: `Insufficient leave credits. Remaining balance is ${remaining}.`,
+        message: "Leave days must be greater than zero.",
       });
     }
 
-    creditItem.used = Number(creditItem.used || 0) + Number(leave.totalDays);
+    const earnedCredits = Number(creditItem.earned || 0);
+    const usedCredits = Number(creditItem.used || 0);
+    const remainingCredits = Math.max(earnedCredits - usedCredits, 0);
+
+    const usedWithPay = Math.min(remainingCredits, requestedDays);
+    const usedWithoutPay = requestedDays - usedWithPay;
+
+    creditItem.used = usedCredits + usedWithPay;
 
     const balanceAfter =
       Number(creditItem.earned || 0) - Number(creditItem.used || 0);
@@ -306,8 +313,8 @@ export const approveLeave = async (req, res) => {
       transactionType: "leave_deduction",
       particulars: `Approved leave: ${leave.reason}`,
       earned: 0,
-      usedWithPay: Number(leave.totalDays),
-      usedWithoutPay: 0,
+      usedWithPay,
+      usedWithoutPay,
       balanceAfter,
       remarks,
       createdBy: req.userSchool._id,
@@ -342,8 +349,17 @@ export const approveLeave = async (req, res) => {
       });
 
     return res.json({
-      message: "Leave application approved successfully.",
+      message:
+        usedWithoutPay > 0
+          ? `Leave application approved. ${usedWithPay} day(s) with pay and ${usedWithoutPay} day(s) without pay.`
+          : "Leave application approved successfully.",
       leave: updatedLeave,
+      deduction: {
+        requestedDays,
+        usedWithPay,
+        usedWithoutPay,
+        balanceAfter,
+      },
     });
   } catch (err) {
     return res.status(500).json({
