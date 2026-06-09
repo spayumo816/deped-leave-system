@@ -58,8 +58,12 @@ export default function LoginPage() {
 
           <div className="relative">
             <div className="mb-10 flex items-center gap-3">
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white text-xl font-bold text-sky-700 shadow-sm">
-                DL
+              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white p-1.5 shadow-sm">
+                <img
+                  src="/deped-logo.png"
+                  alt="DepEd Logo"
+                  className="h-full w-full object-contain"
+                />
               </div>
 
               <div>
@@ -107,8 +111,12 @@ export default function LoginPage() {
           <Card className="w-full max-w-md border border-slate-200 bg-white shadow-xl">
             <Card.Content className="p-8">
               <div className="mb-8 text-center">
-                <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-sky-600 text-xl font-bold text-white shadow-sm">
-                  DL
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white p-1.5 shadow-sm">
+                  <img
+                    src="/deped-logo.png"
+                    alt="DepEd Logo"
+                    className="h-full w-full object-contain"
+                  />
                 </div>
 
                 <h1 className="text-2xl font-bold text-slate-900">
