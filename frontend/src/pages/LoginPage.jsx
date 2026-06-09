@@ -111,7 +111,7 @@ export default function LoginPage() {
           <Card className="w-full max-w-md border border-slate-200 bg-white shadow-xl">
             <Card.Content className="p-8">
               <div className="mb-8 text-center">
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white p-1.5 shadow-sm">
+                <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-white p-1.5 shadow-sm">
                   <img
                     src="/deped-logo.png"
                     alt="DepEd Logo"
