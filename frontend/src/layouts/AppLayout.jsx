@@ -137,8 +137,12 @@ export default function AppLayout() {
         <div className="sticky top-0 flex h-screen flex-col">
           <div className="border-b border-slate-100 p-6">
             <div className="flex items-center gap-3">
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-sky-600 text-lg font-bold text-white shadow-sm">
-                DL
+              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white p-1.5 shadow-sm">
+                <img
+                  src="/deped-logo.png"
+                  alt="DepEd Logo"
+                  className="h-full w-full object-contain"
+                />
               </div>
 
               <div>
