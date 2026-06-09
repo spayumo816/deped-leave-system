@@ -133,7 +133,7 @@ export default function AppLayout() {
 
   return (
     <div className="flex min-h-screen bg-slate-50">
-      <aside className="hidden w-[19rem] border-r border-slate-200 bg-white lg:block">
+      <aside className="hidden w-76 border-r border-slate-200 bg-white lg:block">
         <div className="sticky top-0 flex h-screen flex-col">
           <div className="border-b border-slate-100 p-6">
             <div className="flex items-center gap-3">
@@ -151,7 +151,7 @@ export default function AppLayout() {
           </div>
 
           <div className="p-6">
-            <div className="rounded-2xl border border-slate-200 bg-gradient-to-br from-sky-50 to-white p-4 shadow-sm">
+            <div className="rounded-2xl border border-slate-200 bg-linear-to-br from-sky-50 to-white p-4 shadow-sm">
               <div className="flex items-start gap-3">
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-sky-100 text-sky-700">
                   <BuildingOffice2Icon className="h-5 w-5" />
