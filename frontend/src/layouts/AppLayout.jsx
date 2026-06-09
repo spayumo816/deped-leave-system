@@ -147,9 +147,9 @@ export default function AppLayout() {
 
               <div>
                 <h1 className="text-base font-bold text-slate-900">
-                  DLMS
+                  School-based Leave Management System
                 </h1>
-                <p className="text-xs text-slate-500">Management System</p>
+                {/* <p className="text-xs text-slate-500">Management System</p> */}
               </div>
             </div>
           </div>
