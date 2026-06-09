@@ -182,7 +182,7 @@ export default function RegisterPage() {
   return (
     <main className="min-h-screen bg-slate-50">
       <div className="grid min-h-screen grid-cols-1 lg:grid-cols-2">
-        <section className="relative hidden overflow-hidden bg-gradient-to-br from-sky-700 via-sky-600 to-cyan-400 px-12 py-10 text-white lg:flex lg:flex-col lg:justify-between">
+        <section className="relative hidden overflow-hidden bg-linear-to-br from-sky-700 via-sky-600 to-cyan-400 px-12 py-10 text-white lg:flex lg:flex-col lg:justify-between">
           <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-white/10" />
           <div className="absolute -bottom-32 left-20 h-80 w-80 rounded-full bg-white/10" />
 

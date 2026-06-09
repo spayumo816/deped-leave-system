@@ -160,7 +160,7 @@ export default function LeaveApplicationsPage() {
 
   return (
     <div className="space-y-6">
-      <section className="overflow-hidden rounded-3xl border border-slate-200 bg-gradient-to-br from-sky-600 via-sky-500 to-cyan-400 p-6 text-white shadow-sm">
+      <section className="overflow-hidden rounded-3xl border border-slate-200 bg-linear-to-br from-sky-600 via-sky-500 to-cyan-400 p-6 text-white shadow-sm">
         <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
           <div>
             <p className="text-sm font-semibold uppercase tracking-wide text-sky-100">
@@ -291,7 +291,7 @@ export default function LeaveApplicationsPage() {
           </div>
 
           <div className="overflow-x-auto">
-            <table className="w-full min-w-[1050px]">
+            <table className="w-full min-w-262.5">
               <thead className="bg-slate-50">
                 <tr>
                   <TableHeader>Employee</TableHeader>
