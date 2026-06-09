@@ -42,6 +42,7 @@ const menuByRole = {
       path: "/pending-approvals",
       icon: ClipboardDocumentCheckIcon,
     },
+    { label: "Leave Ledger", path: "/leave-ledger", icon: BookOpenIcon },
     {
       label: "Employees' Leave Applications",
       path: "/leaves",
