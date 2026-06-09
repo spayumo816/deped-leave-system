@@ -21,7 +21,7 @@ dist-ssr
 *.ntvs*
 *.njsproj
 *.sln
-*.sw?
+*.sw?git ls-files | grep .env
 
 .env
 .env*
