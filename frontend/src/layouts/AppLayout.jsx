@@ -139,8 +139,8 @@ export default function AppLayout() {
             <div className="flex items-center gap-3">
               <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white p-1.5 shadow-sm">
                 <img
-                  src="/deped-logo.png"
-                  alt="DepEd Logo"
+                  src="/slms-logo.png"
+                  alt="SLMS Logo"
                   className="h-full w-full object-contain"
                 />
               </div>
